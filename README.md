@@ -10,7 +10,7 @@ El objetivo principal del proyecto es comparar **Binary Insertion Sort** y **Cyc
 - Profundidad de recursión (si aplica)
 - Estabilidad y complejidad teórica
 
-# Resultados esperados
+## Resultados esperados
 
 Los resultados compararán la eficiencia en:
 - Tiempo promedio de ejecución
@@ -18,7 +18,7 @@ Los resultados compararán la eficiencia en:
 - Comportamiento ante distintas distribuciones de entrada
 - Gráficas y tablas se incluirán progresivamente en la carpeta docs/ conforme avance el análisis.
 
-## 👥 Autores
+## Autores
 
-- **Cesar Jimmy Chambe Mamani** [![GitHub](https://img.shields.io/badge/GitHub-000?style=flat&logo=github&logoColor=white)](https://github.com/KitllyCat)
-- **Luis Fernando Chura Coaquira** [![GitHub](https://img.shields.io/badge/GitHub-000?style=flat&logo=github&logoColor=white)](https://github.com/KitllyCato)
+- **Cesar Jimmy Chambe Mamani**     [![GitHub](https://img.shields.io/badge/GitHub-000?style=flat&logo=github&logoColor=white)](https://github.com/KitllyCat)
+- **Luis Fernando Chura Coaquira**     [![GitHub](https://img.shields.io/badge/GitHub-000?style=flat&logo=github&logoColor=white)](https://github.com/AlguienXD888)
