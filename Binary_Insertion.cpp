@@ -1,4 +1,5 @@
-#include<iostream>
+#include <iostream>
+#include <fstream>
 using namespace std;
 
 void insertionbi(int a[],int n){
@@ -26,12 +27,32 @@ void insertionbi(int a[],int n){
 }
 
 int main(){
-	int n;
-	cin>>n;
-	int a[n];
-	for(int i=0;i<n;i++){
-		cin>>a[i];
+	
+	string nombreArchivo;
+    cout<<"Ingrese el nombre del archivo .csv: ";
+    cin>>nombreArchivo;
+
+    ifstream archivo(nombreArchivo);
+    if (!archivo.is_open()){
+        cout<<"Error al abrir el archivo. Ingrese bien el nombre"<<endl;
+        return 1;
+    }
+
+    int cont=0;
+    int temp;
+    while (archivo >> temp){
+    	cont++;
 	}
+    archivo.close();
+    int n=cont;
+	int a[100000]; //Importante, modificar esto de acuerdo a la cantidad de numeros de n
+
+    archivo.open(nombreArchivo);
+    for (int i = 0; i < cont; i++) {
+        archivo >> a[i];
+    }
+    archivo.close();
+	
 	insertionbi(a, n);
 	for(int i=0;i<n;i++){
 		cout<<a[i]<<" ";
