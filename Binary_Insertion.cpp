@@ -1,10 +1,14 @@
 #include <iostream>
+#include<chrono>
 #include <fstream>
 using namespace std;
 
 void insertionbi(int a[],int n){
+	int comparations=0;
+	long long int swapes=0;
 	int aux, izq=0, der=n-1;
 	int m, j;
+	chrono::steady_clock::time_point begin=chrono::steady_clock::now();	
 	for(int i=1;i<n;i++){
 		aux=a[i];
 		izq=0;
@@ -16,14 +20,26 @@ void insertionbi(int a[],int n){
 			}else{
 				izq=m+1;
 			}
+			comparations+=1;
 		}
 		j=i-1;
 		while(j>=izq){
 			a[j+1]=a[j];
 			j=j-1;
+			swapes+=1;
 		}
 		a[izq]=aux;
 	}
+	chrono::steady_clock::time_point end=chrono::steady_clock::now();
+	
+	ofstream archivo("Datos del algoritmo binary insertion sort.txt");
+    archivo<<"Comparaciones: "<<comparations<<"\n";
+	archivo<<"Intercambios: "<<swapes<<"\n\n";
+	archivo<<"Tiempo de demora:\n";
+	archivo<<"Milisegundos	[ms]: "<<chrono::duration_cast<chrono::milliseconds>(end-begin).count()<<"\n";
+    archivo<<"Microsegundos	[us]: "<<chrono::duration_cast<chrono::microseconds>(end-begin).count()<<"\n";
+    archivo<<"Nanosegundos	[ns]: "<<chrono::duration_cast<chrono::nanoseconds>(end-begin).count()<<"\n";
+    archivo.close();
 }
 
 int main(){
