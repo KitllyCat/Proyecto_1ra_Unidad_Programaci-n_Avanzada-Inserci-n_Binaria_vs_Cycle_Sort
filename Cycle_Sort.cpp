@@ -1,9 +1,13 @@
-#include <iostream>
-#include <algorithm>
-#include <fstream>
+#include<iostream>
+#include<algorithm>
+#include<fstream>
+#include<chrono>
 using namespace std;
 
 void cyclesort(int a[], int n){
+	int comparations=0;
+	long long int swapes=0;
+	chrono::steady_clock::time_point begin=chrono::steady_clock::now();
 	for(int i=0;i<n-1;i++){
 		int val=a[i];
 		int pos=i;
@@ -11,15 +15,18 @@ void cyclesort(int a[], int n){
 			if(a[j]<val){
 				pos=pos+1;
 			}
+			comparations+=1;
 		}
 		if(pos==i){
 			continue;
 		}
 		while(val==a[pos]){
 			pos=pos+1;
+			comparations+=1;
 		}
 		if(pos!=i){
 			swap(val,a[pos]);
+			swapes+=1;
 		}
 		while(pos!=i){
 			pos=i;
@@ -27,13 +34,26 @@ void cyclesort(int a[], int n){
 				if(a[j]<val){
 					pos=pos+1;
 				}
+				comparations+=1;
 			}
 			while(val==a[pos]){
 				pos=pos+1;
+				comparations+=1;
 			}
 			swap(val, a[pos]);
+			swapes+=1;
 		}
 	}
+	chrono::steady_clock::time_point end=chrono::steady_clock::now();
+	
+	ofstream archivo("Datos del algoritmo cycle sort.txt");
+    archivo<<"Comparaciones: "<<comparations<<"\n";
+	archivo<<"Intercambios: "<<swapes<<"\n\n";
+	archivo<<"Tiempo de demora:\n";
+	archivo<<"Milisegundos	[ms]: "<<chrono::duration_cast<chrono::milliseconds>(end-begin).count()<<"\n";
+    archivo<<"Microsegundos	[us]: "<<chrono::duration_cast<chrono::microseconds>(end-begin).count()<<"\n";
+    archivo<<"Nanosegundos	[ns]: "<<chrono::duration_cast<chrono::nanoseconds>(end-begin).count()<<"\n";
+    archivo.close();
 }
 
 int main(){
@@ -64,8 +84,6 @@ int main(){
     archivo.close();
 	
 	cyclesort(a, n);
-	for(int i=0;i<n;i++){
-		cout<<a[i]<<" ";
-	}
+	
 	return 0;
 }
