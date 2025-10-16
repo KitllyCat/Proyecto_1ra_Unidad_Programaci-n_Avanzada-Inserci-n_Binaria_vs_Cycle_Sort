@@ -10,6 +10,15 @@ El objetivo principal del proyecto es comparar **Binary Insertion Sort** y **Cyc
 - Profundidad de recursión (si aplica)
 - Estabilidad y complejidad teórica
 
+## ⚙️ Metodología
+1. **Lenguaje y entorno:** C++ (compilado con g++ 13.2.0)  
+2. **Plataforma:** Windows 10, CPU Intel i5, 8GB RAM  
+3. **Patrón de entrada:** Aleatorio uniforme  
+4. **Tamaño de entrada:** N = 1,000 / 10,000 / 100,000  
+5. **Número de repeticiones:** 30 por cada tamaño de N  
+6. **Métricas registradas:** Comparaciones, intercambios y tiempo total de ejecución.  
+7. **Medición de tiempo:** `std::chrono::steady_clock`
+
 ## Resultados esperados
 
 Los resultados compararán la eficiencia en:
@@ -17,6 +26,14 @@ Los resultados compararán la eficiencia en:
 - Número de operaciones
 - Comportamiento ante distintas distribuciones de entrada
 - Gráficas y tablas se incluirán progresivamente en la carpeta docs/ conforme avance el análisis.
+
+## Ejecución
+Compila los algoritmos y ejecuta el programa desde la terminal:
+```bash
+- "g++ main.cpp -o comparacion"
+- "./comparacion"
+
+El codigo se encuentra en la carpeta source y desde alli se puede compilar
 
 ## Autores
 
