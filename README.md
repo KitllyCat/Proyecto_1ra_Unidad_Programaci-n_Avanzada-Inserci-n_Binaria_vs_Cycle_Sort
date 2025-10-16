@@ -26,16 +26,14 @@ Los resultados compararán la eficiencia en:
 - Número de operaciones
 - Comportamiento ante distintas distribuciones de entrada
 - Gráficas y tablas se incluirán progresivamente en la carpeta docs/ conforme avance el análisis.
-
-## Ejecución
-Compila los algoritmos y ejecuta el programa desde la terminal:
-```bash
-- "g++ main.cpp -o comparacion"
-- "./comparacion"
-
-El codigo se encuentra en la carpeta source y desde alli se puede compilar
-
+- 
 ## Autores
 
 - **Cesar Jimmy Chambe Mamani**     [![GitHub](https://img.shields.io/badge/GitHub-000?style=flat&logo=github&logoColor=white)](https://github.com/KitllyCat)
 - **Luis Fernando Chura Coaquira**     [![GitHub](https://img.shields.io/badge/GitHub-000?style=flat&logo=github&logoColor=white)](https://github.com/AlguienXD888)
+- 
+## Ejecución
+El codigo se encuentra en la carpeta source y desde alli se puede compilar. Compila los algoritmos y ejecuta el programa desde la terminal:
+```bash
+- "g++ main.cpp -o comparacion"
+- "./comparacion"
