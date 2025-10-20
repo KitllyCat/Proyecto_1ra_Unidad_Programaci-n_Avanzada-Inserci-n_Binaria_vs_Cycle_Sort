@@ -1,0 +1,7 @@
+Comparaciones: 1496685
+Intercambios: 4999796959
+
+Tiempo de demora:
+Milisegundos	[ms]: 15501
+Microsegundos	[us]: 15501802
+Nanosegundos	[ns]: 15501802100
